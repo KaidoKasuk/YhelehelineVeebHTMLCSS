@@ -1,4 +1,4 @@
-img {
+#profilepic {
   width: 200px;
   height: 200px;
   object-fit: cover;
@@ -12,4 +12,14 @@ img {
 em {
   color: red;
   font-style: normal;
+}
+#heropic {
+ width: 400px; 
+ height: 200px;
+ display: grid;
+ justify-self: center;
+}
+header {display: grid;
+justify-self: center;
+background-color: aqua;
 }
