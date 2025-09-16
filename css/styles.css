@@ -1,4 +1,49 @@
-#profilepic {
+h1 {
+  font-size: 4rem;
+  background-color: rgb(77, 160, 232);
+  text-align: center;
+  flex-grow: 1;
+  padding: 2rem;
+  margin: 0%;
+}
+header {
+  width: 100%;
+  text-align: center;
+}
+nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 0.5fr));
+  justify-content: space-evenly;
+  height: auto;
+  height: 3rem;
+  background-color: blueviolet;
+  align-items: center;
+}
+
+a:visited {
+  color: aquamarine;
+}
+a:link {
+  color: violet;
+}
+a:hover {
+  color: slategray;
+  border-style: dashed;
+  border-radius: 3px;
+  border-color: black;
+  padding: 12px;
+}
+p {
+  max-width: 80%;
+}
+#heropicture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+#profilepicture {
   width: 200px;
   height: 200px;
   object-fit: cover;
@@ -10,16 +55,14 @@
   font-weight: bold;
 }
 em {
-  color: red;
+  color: rgb(133, 0, 0);
   font-style: normal;
 }
-#heropic {
- width: 400px; 
- height: 200px;
- display: grid;
- justify-self: center;
+#dead_tree {
+  width: 100px;
+  height: 200px;
 }
-header {display: grid;
-justify-self: center;
-background-color: aqua;
+footer {
+  background-color: grey;
+  height: 200px;
 }
