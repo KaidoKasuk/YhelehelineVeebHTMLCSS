@@ -25,10 +25,45 @@
       <section id="sissejuhatus">
         <h2>Sissejuhatus</h2>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere,
-          ratione tenetur cum totam harum cumque vitae cupiditate, deserunt est
-          eaque blanditiis, esse unde perferendis. Architecto inventore ipsum
-          illo explicabo vel.
+         HTML loob struktuuri (skeleti), CSS annab välimuse. Standardid tagavad, et kood töötab kõikjal.
+
+Veebileht koosneb alati kahest suuremast osast: päisest (&lt;head&gt;) ja sisust (&lt;body&gt;). Kõige ülal on deklaratsioon &lt;!doctype html&gt;, mis ütleb brauserile, et dokument järgib HTML5 standardit. See väldib nn quirks-mode’i, kus brauserid püüavad vana koodi "arvata".
+
+&lt; lang="et"&gt; määrab dokumendi alguse ja keele, mis aitab otsimootoritel ja ekraanilugejatel sisu mõista. Päisesse (&lt;head&gt; käib:
+
+&lt;meta charset="utf-8"&gt; – määrab, et tekst on UTF-8 kodeeringus (õiged täpitähed).
+
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt; – seab mobiilse seadme vaate laiuse ja skaala õigeks.
+
+&lt;title&gt; lehe nimi, mis kuvatakse brauseri sakil.
+
+&lt;link rel="stylesheet" href="assets/css/style.css"&gt;  viide välisele CSS-failile.
+
+
+Miks peab style kaust linkima? Kui stiilid on eraldi failis, siis:
+
+Kood on puhtam  sisaldab vaid sisu ja struktuuri, mitte kujundust.
+
+Taaskasutus sama CSS fail saab kujundada mitut  lehte.
+
+Jõudlus brauserid saavad CSS-faili vahemällu salvestada ja kiiremini laadida.
+
+Hooldatavus stiile saab muuta ühes kohas ja need rakenduvad kõikjal.
+
+
+
+
+
+Samm-sammult.
+
+Ava VS Code, loo index. ja css kaust, mille sisse style.css.
+
+Lisa DOCTYPE ja põhistruktuur.
+
+Seo CSS &lt;link&gt; abil.
+
+Lisa skip-link, et klaviatuurikasutaja saaks kiiresti põhisisusse liikuda.
+
         </p>
       </section>
 
@@ -47,13 +82,14 @@
             alt="Unsplashi surnud puu"
           />
         </a>
+        <h2>Video</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ad
           mollitia corporis reiciendis explicabo, eaque praesentium. Magnam
           architecto itaque, id repellat expedita dolorum nostrum nesciunt quod
           accusantium necessitatibus, dignissimos nulla!
         </p>
-        <video
+        <video id="old_monitor"
           controls
           width="640"
           height="360"

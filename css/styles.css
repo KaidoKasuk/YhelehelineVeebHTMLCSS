@@ -1,14 +1,18 @@
 h1 {
-  font-size: 4rem;
-  background-color: rgb(77, 160, 232);
+  font-size: 6rem;
+  font-style: italic;
+  background-color: rgb(209, 209, 188);
   text-align: center;
   flex-grow: 1;
-  padding: 2rem;
-  margin: 0%;
+  padding: 3rem;
+  margin: 2rem;
+  color: coral;
 }
 header {
   width: 100%;
   text-align: center;
+  position: sticky;
+  padding: 0px;
 }
 nav {
   display: grid;
@@ -16,7 +20,7 @@ nav {
   justify-content: space-evenly;
   height: auto;
   height: 3rem;
-  background-color: blueviolet;
+  background-color: rgba(13, 13, 7, 0.551);
   align-items: center;
 }
 
@@ -34,7 +38,10 @@ a:hover {
   padding: 12px;
 }
 p {
-  max-width: 80%;
+  max-width: 100%;
+  font-style: arial;
+  font-size: 20px;
+  padding: 5px;
 }
 #heropicture {
   display: flex;
@@ -42,6 +49,7 @@ p {
   align-items: center;
   width: 100%;
   height: auto;
+  
 }
 #profilepicture {
   width: 200px;
@@ -49,7 +57,7 @@ p {
   object-fit: cover;
   border-radius: 100px;
   float: left;
-  margin-right: 10px;
+  margin-right: 100px;
 }
 .username {
   font-weight: bold;
@@ -65,4 +73,8 @@ em {
 footer {
   background-color: grey;
   height: 200px;
+}
+body {
+  background-color: rgb(245, 245, 220);
+  padding: 05rem;
 }
