@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
   <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="voco" />
-    <meta name="keywords" content="voco" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Michroma&family=Orbitron:wght@400..900&display=swap"
+      rel="styles"
+    />
     <title>Veebileht</title>
   </head>
 
@@ -15,139 +19,292 @@
       <nav aria-label="Põhinavigatsioon">
         <a href="#sissejuhatus">Sissejuhatus</a>
         <a href="#teooria">Teooria</a>
-        <a href="#profilepicture">Kontakt</a>
-        <a href="#dead_tree">Surnud puu</a>
-        <a href="#sisu">sisu</a>
+        <a href="#semaatika_ja_navigeerimine">Semaatika ja Navigeerimine</a>
+        <a href="#meedia">Meedia</a>
+        <a href="#css_alused">CSS alused</a>
+        <a href="#lehe_paigutus">Lehe paigutus</a>
+        <a href="#kohandavus_ja_ligipaasetavus">Kohanduvus ja Ligipaasetavus</a>
+        <a href="#validaatorid">Validaatorid</a>
       </nav>
     </header>
     <main>
-      <img id="heropicture" src="/assets/old_monitor.avif" alt="heropicture" />
-      <section id="sissejuhatus">
-        <h2>Sissejuhatus</h2>
-        <p>
-         HTML loob struktuuri (skeleti), CSS annab välimuse. Standardid tagavad, et kood töötab kõikjal.
-
-Veebileht koosneb alati kahest suuremast osast: päisest (&lt;head&gt;) ja sisust (&lt;body&gt;). Kõige ülal on deklaratsioon &lt;!doctype html&gt;, mis ütleb brauserile, et dokument järgib HTML5 standardit. See väldib nn quirks-mode’i, kus brauserid püüavad vana koodi "arvata".
-
-&lt; lang="et"&gt; määrab dokumendi alguse ja keele, mis aitab otsimootoritel ja ekraanilugejatel sisu mõista. Päisesse (&lt;head&gt; käib:
-
-&lt;meta charset="utf-8"&gt; – määrab, et tekst on UTF-8 kodeeringus (õiged täpitähed).
-
-&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt; – seab mobiilse seadme vaate laiuse ja skaala õigeks.
-
-&lt;title&gt; lehe nimi, mis kuvatakse brauseri sakil.
-
-&lt;link rel="stylesheet" href="assets/css/style.css"&gt;  viide välisele CSS-failile.
-
-
-Miks peab style kaust linkima? Kui stiilid on eraldi failis, siis:
-
-Kood on puhtam  sisaldab vaid sisu ja struktuuri, mitte kujundust.
-
-Taaskasutus sama CSS fail saab kujundada mitut  lehte.
-
-Jõudlus brauserid saavad CSS-faili vahemällu salvestada ja kiiremini laadida.
-
-Hooldatavus stiile saab muuta ühes kohas ja need rakenduvad kõikjal.
-
-
-
-
-
-Samm-sammult.
-
-Ava VS Code, loo index. ja css kaust, mille sisse style.css.
-
-Lisa DOCTYPE ja põhistruktuur.
-
-Seo CSS &lt;link&gt; abil.
-
-Lisa skip-link, et klaviatuurikasutaja saaks kiiresti põhisisusse liikuda.
-
-        </p>
-      </section>
-
-      <section id="teooria">
-        <h2>Teooria</h2>
-        <p>
-          HTML tähendus. Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. A, eaque dolorum debitis in totam dolor magnam est quis numquam
-          doloremque et laboriosam iure possimus doloribus, qui obcaecati,
-          beatae mollitia similique?
-        </p>
-        <a href="https://unsplash.com/" target="_blank" rel="dead_tree">
-          <img
-            id="dead_tree"
-            src="https://images.unsplash.com/photo-1755997234962-931d86bee287?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Unsplashi surnud puu"
-          />
-        </a>
-        <h2>Video</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ad
-          mollitia corporis reiciendis explicabo, eaque praesentium. Magnam
-          architecto itaque, id repellat expedita dolorum nostrum nesciunt quod
-          accusantium necessitatibus, dignissimos nulla!
-        </p>
-        <video id="old_monitor"
-          controls
-          width="640"
-          height="360"
-          poster="assets/old_monitor.avif"
-        >
-          <source src="assets/windmills.mp4" type="video/mp4" />
-        </video>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel
-          dolorem architecto dicta harum ex, amet blanditiis provident expedita
-          placeat velit aut necessitatibus reprehenderit? Repudiandae ad qui
-          vero necessitatibus facilis?
-        </p>
-      </section>
-      <section id="sisu">
-        <h2>sisu</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-          exercitationem at quaerat commodi alias id, officia aspernatur nemo ad
-          facilis, eveniet esse hic ullam aliquam suscipit molestiae saepe nam
-          facere.
-        </p>
-      </section>
-      <section>
+      <div class="sissejuhatus_flex">
+        <section id="sissejuhatus">
+          <h2>Sissejuhatus</h2>
+          <p>
+            See veebileht on loodud selleks, et õpetada veebiarenduse
+            põhialuseid. CSS ja HTMLiga saad luua omaenda veebilehti ja
+            projekte. Mõistad, kuidas töötavad peaaegu kõik veebilehed
+            internetis. HTML ja CSS on esimene samm, kui soovid liikuda edasi
+            JavaScripti ja keerukama veebiarenduse juurde.
+          </p>
+        </section>
+        <pre id="pre_html_naide">
+          &lt;!DOCTYPE html&gt; &lt;html lang="et"&gt; &lt;head&gt; &lt;meta /* Näide HTMList */
+          charset="UTF-8"&gt; &lt;title&gt;Minu esimene leht&lt;/title&gt;
+          &lt;/head&gt; &lt;body&gt; &lt;h1&gt;Tere tulemast!&lt;/h1&gt;
+          &lt;p&gt;See on minu esimene HTML-leht.&lt;/p&gt; &lt;/body&gt;
+          &lt;/html&gt;
+        </pre>
+      </div>
+      <div class="teooria_flex">
+        <section id="teooria">
+          <h2>Teooria</h2>
+          <p>
+            HTML (HyperText Markup Language) on veebilehtede ehituskivi — keel,
+            millega kirjutatakse ja struktuuritakse veebilehti. HTML määrab ära,
+            millised osad lehel on pealkirjad, lõigud, lingid, pildid, tabelid
+            jpm. See ei määra välimust (seda teeb CSS) ega käitumist (seda teeb
+            JavaScript), aga ilma HTML-ita poleks ühtegi veebilehte.
+          </p>
+        </section>
         <svg
-          role="img"
-          aria-labelledby="ic-title ic-desc"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
+          id="html_svg"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <title id="ic-title">Info ikoon</title>
-          <desc id="ic-desc">Ringis i-täht</desc>
-          <circle cx="12" cy="12" r="10" fill="currentColor" />
-          <text
-            x="32"
-            y="16"
-            text-anchor="middle"
-            font-size="12"
-            fill="#bb9900"
-          >
-            i
-          </text>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26"></path>
+            <path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529"></path>
+            <path
+              d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z"
+              fill="white"
+            ></path>
+          </g>
         </svg>
+      </div>
+      <div class="semaatika_ja_navigeerimine">
+        <section id="semaatika_ja_navigeerimine">
+          <h2>Semantika ja Navigeerimine</h2>
+          <p>
+            HTML-i semantika tähendab, et iga elementil on oma kindel tähendus
+            ja roll. Näiteks &lt;header&gt; tähistab päist, &lt;main&gt; peamist
+            sisu, &lt;footer&gt; jalust ning &lt;article&gt;, &lt;section&gt; ja
+            &lt;aside&gt; aitavad sisu loogiliselt jaotada. Semantika kasutamine
+            muudab veebilehed arusaadavamaks nii inimestele kui ka
+            otsingumootoritele. See aitab otsingutulemustes paremini silma
+            paista ja tagab parema ligipääsetavuse abivahendeid kasutavatele
+            inimestele. HTML-i ülesehitus põhineb hierarhilisel struktuuril, kus
+            elemendid võivad sisaldada teisi elemente. Tüüpiline veebileht
+            koosneb päisest, navigeerimismenüüst, põhisisust ja jalusest.
+            Struktuuri korrektsus on oluline, et kasutajad leiaksid kiiresti
+            vajaliku info ning et arendajad saaksid koodi lihtsamalt hooldada.
+            Hea struktuur muudab veebilehe loogiliseks ja järjekindlaks.
+            Navigeerimine HTML-is toimub peamiselt &lt;nav&gt; elemendi kaudu,
+            mis sisaldab linke erinevatele leheosadele või teistele lehtedele.
+            Lingid luuakse &lt;a&gt; elemendi abil, millele saab lisada sihtkoha
+            aadressi. Hästi organiseeritud navigeerimine tagab kasutajatele
+            mugava liikumise veebilehel, aitab vältida segadust ja parandab
+            üldist kasutajakogemust.
+          </p>
+        </section>
+        <pre id="pre_semaatika_ja_navigeerimine">
+&lt;header&gt;
+  &lt;h1&gt;Minu koduleht&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Avaleht&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="teenused.html"&gt;Teenused&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="kontakt.html"&gt;Kontakt&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+  &lt;p&gt;Siin on kogu peamine sisu.&lt;/p&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;&amp;copy; 2025 Minu veebileht&lt;/p&gt;
+&lt;/footer&gt;
+            </pre
+        >
+      </div>
+      <div class="meedia_flex">
+        <section id="meedia">
+          <h2>Meedia</h2>
+          <p>
+            HTML võimaldab kasutada erinevaid meediaelemente, et muuta
+            veebilehed visuaalselt ja sisuliselt mitmekesisemaks. Näiteks saab
+            pilte lisada
+            <code>&lt;img&gt;</code> abil, heli <code>&lt;audio&gt;</code> abil
+            ja videoid <code>&lt;video&gt;</code> abil. Lisaks on olemas
+            <code>&lt;iframe&gt;</code>, millega saab manustada teisi lehti või
+            teenuseid, näiteks kaarte ja videoid. Meediaelementide eesmärk ei
+            ole ainult ilu või tähelepanu tõmbamine, vaid ka kasutusmugavuse,
+            õppimise, turunduse ja interaktiivsuse toetamine. Korralikult
+            lisatud meedia loob professionaalse, kaasaegse ja kaasahaarava
+            veebikeskkonna.
+          </p>
+        </section>
+        <pre id="pre_meedia">
+      
+&lt;img src="https://via.placeholder.com/300" alt="Näidis pilt"&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="sample-audio.mp3" type="audio/mpeg"&gt;
+  Teie brauser ei toeta helifaili esitust.
+&lt;/audio&gt;
+
+&lt;video controls width="400"&gt;
+  &lt;source src="sample-video.mp4" type="video/mp4"&gt;
+  Teie brauser ei toeta videofaili esitust.
+&lt;/video&gt;
+
+&lt;iframe width="400" height="225" 
+        src="https://www.youtube.com/
+        title="YouTube video"&gt;&lt;/iframe&gt;
+  </pre
+        >
+      </div>
+      <div class="css_alused">
+        <section id="css_alused">
+          <h2>CSS alused</h2>
+          <p>
+            CSS ehk Cascading Style Sheets on tööriist, millega saab kujundada
+            HTML-is loodud struktuuri. CSS eraldab sisu ja kujunduse, mis
+            tähendab, et &lt;h1&gt; võib olla nähtavalt suurem ja värvilisem kui
+            tavaline &lt;p&gt;. CSS abil on võimalik muuta fontide suurust,
+            värvi ja stiili, lisada taustavärve või -pilte, määrata paigutusi
+            ning kohandada elemente, nagu &lt;div&gt;, flexboxi või
+            grid-süsteemiga. Näiteks saab &lt;section&gt; element paigutada
+            ekraanil keskele, samal ajal kui &lt;aside&gt; liigub küljele.
+            Oluline osa CSS-ist on ka responsiivsus. Meediapäringud võimaldavad
+            veebilehe paigutust kohandada vastavalt seadmele – olgu see
+            &lt;header&gt; mobiilis kitsam või &lt;nav&gt; muutumas
+            hamburger-menüüks. Lisaks saab luua dünaamilisi efekte: &lt;a&gt;
+            lingile võib lisada hover-efekti, &lt;button&gt; saab muuta värvi,
+            kui kasutaja sellel klõpsab, ja &lt;img&gt; võib aeglaselt tuhmuda
+            üleminekuga. CSS annab võimaluse muuta iga veebileht ühtaegu
+            funktsionaalseks ja visuaalselt atraktiivseks.
+          </p>
+        </section>
+        <pre id="pre_css_alused">
+&lt;style&gt;
+  h1 {
+    color: #2a9d8f;
+    font-size: 36px;
+    text-align: center;
+  }
+  p {
+    color: #264653;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  a {
+    color: #e76f51;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: #f4a261;
+  }
+&lt;/style&gt;
+</pre
+        >
+      </div>
+      <div class="kohandavus_ja_ligipaasetavus">
+        <section id="kohandavus_ja_ligipaasetavus">
+          <h2>Kohanduvus ja ligipääsetavus</h2>
+          <p>
+            Kohanduvus HTML-is tähendab, et veebileht töötab erinevatel
+            seadmetel, nagu telefonid, tahvelarvutid ja arvutid. Selle
+            saavutamiseks kasutatakse responsiivset disaini, näiteks CSS-i media
+            queries ja paindlikke paigutusi &lt;div&gt; või &lt;section&gt;
+            elementide jaoks. Ligipääsetavus tagab, et kõik kasutajad,
+            sealhulgas erivajadustega inimesed, saavad sisu hõlpsasti tarbida.
+            Selleks kasutatakse semantilisi elemente nagu &lt;header&gt;,
+            &lt;nav&gt;, &lt;main&gt; ja &lt;footer&gt;, tekstialternatiive
+            piltidele (&lt;img alt&gt;), piisavat kontrasti ning õigesti
+            struktureeritud pealkirju (&lt;h1&gt;–&lt;h6&gt;). Kohanduv ja
+            ligipääsetav veebileht parandab kasutajakogemust, võimaldab kiiret
+            navigeerimist ja suurendab veebilehe kasutatavust kõigile
+            külastajatele.
+          </p>
+        </section>
+        <pre id="pre_kohandavus_ja_ligipaasetavus">
+&lt;style&gt;
+  /* Põhistiilid */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+  }
+
+  nav a {
+    margin-right: 15px;
+    color: #0077cc;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Kohanduvus mobiilseadmetele */
+  @media (max-width: 600px) {
+    nav {
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav a {
+      margin: 5px 0;
+    }
+
+    body {
+      padding: 10px;
+    }
+  }
+&lt;/style&gt;
+</pre
+        >
+      </div>
+      <section id="validaatorid">
+        <h2>Validaatorid</h2>
+        <p>
+          Veebilehe kontrollimiseks kasutatakse W3C validaatoreid. Need aitavad
+          leida vigu HTML-is ja CSS-is, et kood oleks korrektne ja toimiks
+          kõigis brauserites.
+        </p>
+        <ul>
+          <li>
+            <a href="https://validator.w3.org/" target="_blank"
+              >HTML Validator</a
+            >
+          </li>
+          <li>
+            <a href="https://jigsaw.w3.org/css-validator/" target="_blank"
+              >CSS Validator</a
+            >
+          </li>
+        </ul>
       </section>
     </main>
 
     <footer>
-      <section>
+      <div class="footer">
         <img
           id="profilepicture"
           src="assets/lake.jpg"
           alt="lake surronded by mountains"
         />
-        <p class="username">Kaido Kasuk</p>
-        <p>Voco kooli <em>õpilane</em>.</p>
-        <a href="assets/lake.jpg">Lake</a>
-      </section>
+        <pre id="pre_footer">
+Kaido Kasuk
+
+Voco kooli <em>õpilane</em>
+           </pre
+        >
+        <a href="assets/lake.jpg">profiilipilt</a>
+      </div>
     </footer>
   </body>
 </html>
