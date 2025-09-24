@@ -1,7 +1,7 @@
 h1 {
   font-size: 6rem;
   font-style: italic;
-  background-image: url("/assets/CMS.jpg");
+  background-image: url("../assets/CMS.jpg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -48,7 +48,7 @@ nav a {
 }
 
 a:link {
-  color: rgb(0, 255, 26);
+  color: rgb(109, 251, 211);
 }
 nav a:visited {
   color: rgb(0, 34, 255);
@@ -62,7 +62,7 @@ body {
   margin: 0px;
 }
 h2 {
-  font-size: 2em;
+  font-size: 2.2em;
   font-family: "Michroma", sans-serif;
   color: rgb(29, 0, 44);
   text-shadow: 0 4px 3px rgb(255, 0, 247);
